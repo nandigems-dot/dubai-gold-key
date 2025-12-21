@@ -65,8 +65,10 @@ const LandingPage = () => {
       submittedAt: new Date().toISOString(),
     };
 
-    // Log lead data for testing (remove in production)
-    console.log("Lead submitted:", leadData);
+    // Only log lead data in development
+    if (import.meta.env.DEV) {
+      console.log("Lead submitted:", leadData);
+    }
 
     // Simulate form submission delay
     await new Promise(resolve => setTimeout(resolve, 500));
