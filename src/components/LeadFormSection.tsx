@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const LeadFormSection = () => {
   const navigate = useNavigate();
@@ -54,28 +55,38 @@ const LeadFormSection = () => {
 
     setIsSubmitting(true);
 
-    // Prepare lead data (for future backend integration)
-    const leadData = {
-      ...formData,
-      ...hiddenFields,
-      submittedAt: new Date().toISOString(),
-    };
+    try {
+      // Save lead to database
+      const { error } = await supabase.from("leads").insert({
+        full_name: formData.fullName.trim(),
+        mobile: formData.mobile.trim(),
+        email: formData.email.trim() || null,
+        source: hiddenFields.source,
+        medium: hiddenFields.medium,
+        campaign: hiddenFields.campaign || null,
+        page_url: hiddenFields.pageUrl,
+      });
 
-    // Log lead data for testing (remove in production)
-    console.log("Lead submitted:", leadData);
+      if (error) {
+        throw error;
+      }
 
-    // Simulate form submission delay
-    await new Promise((resolve) => setTimeout(resolve, 500));
-
-    setIsSubmitting(false);
-
-    // Redirect to thank-you page with lead info preserved
-    navigate("/thank-you", {
-      state: {
-        name: formData.fullName,
-        leadData,
-      },
-    });
+      // Redirect to thank-you page
+      navigate("/thank-you", {
+        state: {
+          name: formData.fullName,
+        },
+      });
+    } catch (error) {
+      console.error("Error submitting lead:", error);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
