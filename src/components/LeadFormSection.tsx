@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const LeadFormSection = () => {
   const navigate = useNavigate();
@@ -55,44 +54,28 @@ const LeadFormSection = () => {
 
     setIsSubmitting(true);
 
-    try {
-      // Save lead to Supabase
-      const { error } = await supabase.from("leads").insert({
-        full_name: formData.fullName || null,
-        mobile: formData.mobile,
-        email: formData.email || null,
-        source: hiddenFields.source,
-        medium: hiddenFields.medium,
-        campaign: hiddenFields.campaign || null,
-        page_url: hiddenFields.pageUrl,
-      });
+    // Prepare lead data (for future backend integration)
+    const leadData = {
+      ...formData,
+      ...hiddenFields,
+      submittedAt: new Date().toISOString(),
+    };
 
-      if (error) {
-        console.error("Error saving lead:", error);
-        toast({
-          title: "Something went wrong",
-          description: "Please try again or contact us directly.",
-          variant: "destructive",
-        });
-        setIsSubmitting(false);
-        return;
-      }
+    // Log lead data for testing (remove in production)
+    console.log("Lead submitted:", leadData);
 
-      // Redirect to thank-you page
-      navigate("/thank-you", {
-        state: {
-          name: formData.fullName,
-        },
-      });
-    } catch (err) {
-      console.error("Error:", err);
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or contact us directly.",
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-    }
+    // Simulate form submission delay
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    setIsSubmitting(false);
+
+    // Redirect to thank-you page with lead info preserved
+    navigate("/thank-you", {
+      state: {
+        name: formData.fullName,
+        leadData,
+      },
+    });
   };
 
   return (
