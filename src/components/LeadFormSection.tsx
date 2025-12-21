@@ -79,25 +79,25 @@ const LeadFormSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-card/30">
-      <div className="max-w-lg mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+    <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 bg-card/30">
+      <div className="max-w-md sm:max-w-lg mx-auto text-center">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
           Get <span className="gold-gradient-text">Exclusive</span> Property Deals
         </h2>
-        <p className="text-muted-foreground mb-8">
+        <p className="text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8 px-2">
           Fill the form below for a free consultation with our investment experts
         </p>
 
-        <div className="glass-card rounded-xl p-6 md:p-8 border border-border/50">
-          <form onSubmit={handleSubmit} className="space-y-5 text-left">
+        <div className="glass-card rounded-xl p-5 sm:p-6 md:p-8 border border-border/50">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 text-left">
             {/* Hidden tracking fields */}
             <input type="hidden" name="source" value={hiddenFields.source} />
             <input type="hidden" name="medium" value={hiddenFields.medium} />
             <input type="hidden" name="campaign" value={hiddenFields.campaign} />
             <input type="hidden" name="pageUrl" value={hiddenFields.pageUrl} />
 
-            <div className="space-y-2">
-              <Label htmlFor="fullName-home" className="text-foreground">
+            <div className="space-y-1.5 sm:space-y-2">
+              <Label htmlFor="fullName-home" className="text-foreground text-sm sm:text-base">
                 Full Name
               </Label>
               <Input
@@ -107,13 +107,13 @@ const LeadFormSection = () => {
                 placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="h-12 bg-background/50 border-border/50 focus:border-primary"
+                className="h-11 sm:h-12 text-base bg-background/50 border-border/50 focus:border-primary"
                 autoComplete="name"
               />
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="mobile-home" className="text-foreground">
+            <div className="space-y-1.5 sm:space-y-2">
+              <Label htmlFor="mobile-home" className="text-foreground text-sm sm:text-base">
                 Mobile Number <span className="text-destructive">*</span>
               </Label>
               <Input
@@ -124,13 +124,13 @@ const LeadFormSection = () => {
                 value={formData.mobile}
                 onChange={handleInputChange}
                 required
-                className="h-12 bg-background/50 border-border/50 focus:border-primary"
+                className="h-11 sm:h-12 text-base bg-background/50 border-border/50 focus:border-primary"
                 autoComplete="tel"
               />
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="email-home" className="text-muted-foreground">
+            <div className="space-y-1.5 sm:space-y-2">
+              <Label htmlFor="email-home" className="text-muted-foreground text-sm sm:text-base">
                 Email <span className="text-muted-foreground/60">(optional)</span>
               </Label>
               <Input
@@ -140,7 +140,7 @@ const LeadFormSection = () => {
                 placeholder="your@email.com"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="h-12 bg-background/50 border-border/50 focus:border-primary"
+                className="h-11 sm:h-12 text-base bg-background/50 border-border/50 focus:border-primary"
                 autoComplete="email"
               />
             </div>
@@ -149,14 +149,14 @@ const LeadFormSection = () => {
               type="submit"
               variant="gold"
               size="xl"
-              className="w-full"
+              className="w-full h-12 sm:h-14 text-base sm:text-lg mt-2"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Get Free Consultation"}
             </Button>
           </form>
 
-          <p className="text-muted-foreground/60 text-xs text-center mt-4">
+          <p className="text-muted-foreground/60 text-xs text-center mt-3 sm:mt-4">
             Your information is secure and will never be shared.
           </p>
         </div>
