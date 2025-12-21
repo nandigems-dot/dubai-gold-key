@@ -11,13 +11,13 @@ const AuthoritySection = () => {
   return (
     <section id="about" className="section-padding bg-secondary/30">
       <div className="container-luxury">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-20 items-center">
           {/* Image */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div className="relative mx-auto max-w-xs sm:max-w-md lg:max-w-none">
               {/* Gold border frame */}
-              <div className="absolute -inset-4 border border-primary/30 rounded-2xl -rotate-3" />
-              <div className="absolute -inset-4 border border-primary/20 rounded-2xl rotate-2" />
+              <div className="absolute -inset-3 sm:-inset-4 border border-primary/30 rounded-2xl -rotate-3" />
+              <div className="absolute -inset-3 sm:-inset-4 border border-primary/20 rounded-2xl rotate-2" />
               
               {/* Image */}
               <div className="relative rounded-xl overflow-hidden gold-glow">
@@ -34,32 +34,32 @@ const AuthoritySection = () => {
           
           {/* Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4 font-medium">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-primary mb-3 sm:mb-4 font-medium">
               Your Trusted Advisor
             </p>
             
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">
               Zubair Malik
             </h2>
             
-            <p className="text-lg md:text-xl text-primary font-medium mb-6">
+            <p className="text-base sm:text-lg md:text-xl text-primary font-medium mb-4 sm:mb-6">
               Dubai Real Estate Investment Consultant
             </p>
             
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
               Specializing in luxury villas, off-plan investments, and high-ROI properties across Dubai. 
               Trusted by international clients for transparent advice, premium access, and end-to-end support.
             </p>
             
             {/* Badges */}
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
               {badges.map((badge, index) => (
                 <div 
                   key={index}
-                  className="glass-card px-4 py-2 flex items-center gap-2 hover-lift"
+                  className="glass-card px-3 sm:px-4 py-1.5 sm:py-2 flex items-center gap-1.5 sm:gap-2 hover-lift"
                 >
-                  <badge.icon className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">{badge.text}</span>
+                  <badge.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
+                  <span className="text-xs sm:text-sm font-medium text-foreground">{badge.text}</span>
                 </div>
               ))}
             </div>

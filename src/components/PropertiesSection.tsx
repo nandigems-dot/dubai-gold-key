@@ -43,20 +43,20 @@ const PropertiesSection = () => {
     <section id="properties" className="section-padding">
       <div className="container-luxury">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary mb-4 font-medium">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-primary mb-3 sm:mb-4 font-medium">
             Featured Properties
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
             Exclusive Investment Opportunities
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm sm:text-base lg:text-lg px-2">
             Hand-picked properties offering exceptional value and returns
           </p>
         </div>
 
         {/* Properties Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {properties.map((property, index) => (
             <div 
               key={index}
@@ -75,25 +75,25 @@ const PropertiesSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
               
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 lg:p-6">
                 {/* Location */}
-                <div className="flex items-center gap-2 text-primary text-sm mb-2">
-                  <MapPin className="w-4 h-4" />
+                <div className="flex items-center gap-1.5 sm:gap-2 text-primary text-xs sm:text-sm mb-1.5 sm:mb-2">
+                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   <span>{property.location}</span>
                 </div>
                 
                 {/* Title */}
-                <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mb-3">
+                <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-2 sm:mb-3">
                   {property.title}
                 </h3>
                 
                 {/* Stats */}
-                <div className="flex flex-wrap items-center gap-4 mb-4">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-foreground">ROI: {property.roi}</span>
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
+                    <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
+                    <span className="text-xs sm:text-sm text-foreground">ROI: {property.roi}</span>
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground">
                     {property.price}
                   </div>
                 </div>
@@ -103,11 +103,11 @@ const PropertiesSection = () => {
                   asChild
                   variant="goldOutline" 
                   size="sm"
-                  className="group/btn"
+                  className="group/btn text-xs sm:text-sm"
                 >
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     Request Details
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/btn:translate-x-1" />
                   </a>
                 </Button>
               </div>

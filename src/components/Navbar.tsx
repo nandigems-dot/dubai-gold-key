@@ -27,18 +27,18 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-lg border-b border-border/50 py-3" 
-          : "bg-transparent py-6"
+          ? "bg-background/95 backdrop-blur-lg border-b border-border/50 py-2 sm:py-3" 
+          : "bg-transparent py-3 sm:py-6"
       }`}
     >
       <div className="container-luxury flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-serif text-xl md:text-2xl font-bold text-foreground">
+        <a href="#" className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-foreground">
           <span className="text-primary">Z</span>ubair <span className="text-primary">M</span>alik
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -58,7 +58,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-foreground p-1"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -69,12 +69,12 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border/50">
-          <div className="container-luxury py-6 flex flex-col gap-4">
+          <div className="container-luxury py-4 sm:py-6 flex flex-col gap-2 sm:gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-foreground hover:text-primary transition-colors py-2"
+                className="text-foreground hover:text-primary transition-colors py-2 text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
