@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { supabase, isSupabaseConfigured } from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client";
 
 const LeadFormSection = () => {
   const navigate = useNavigate();
@@ -56,21 +56,6 @@ const LeadFormSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Check if Supabase is configured
-      if (!isSupabaseConfigured()) {
-        console.log("Supabase not configured yet - form would save:", {
-          full_name: formData.fullName,
-          mobile: formData.mobile,
-          email: formData.email,
-          ...hiddenFields,
-        });
-        // Still redirect to thank-you page for now
-        navigate("/thank-you", {
-          state: { name: formData.fullName },
-        });
-        return;
-      }
-
       // Save lead to Supabase
       const { error } = await supabase.from("leads").insert({
         full_name: formData.fullName || null,
