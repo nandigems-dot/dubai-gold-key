@@ -6,8 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
-const WHATSAPP_NUMBER = "971501234567"; // Replace with actual number
-const PHONE_NUMBER = "+971501234567"; // Replace with actual number
+const WHATSAPP_NUMBER = "971529504782";
+const PHONE_NUMBER = "+971529504782";
 
 const LandingPage = () => {
   const navigate = useNavigate();

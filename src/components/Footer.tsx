@@ -27,7 +27,7 @@ const Footer = () => {
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a 
-                  href="https://wa.me/971529504782"
+                  href="tel:+971529504782"
                   className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base"
                 >
                   <Phone className="w-4 h-4" />
