@@ -78,7 +78,10 @@ const LeadFormSection = () => {
         },
       });
     } catch (error) {
-      console.error("Error submitting lead:", error);
+      // Only log errors in development
+      if (import.meta.env.DEV) {
+        console.error("Error submitting lead:", error);
+      }
       toast({
         title: "Submission failed",
         description: "Please try again or contact us directly.",
