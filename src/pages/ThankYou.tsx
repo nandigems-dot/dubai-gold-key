@@ -2,8 +2,8 @@ import { useLocation } from "react-router-dom";
 import { CheckCircle, Phone, MessageCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const WHATSAPP_NUMBER = "971501234567"; // Replace with actual number
-const PHONE_NUMBER = "+971501234567"; // Replace with actual number
+const WHATSAPP_NUMBER = "971529504782";
+const PHONE_NUMBER = "+971529504782";
 
 const ThankYou = () => {
   const location = useLocation();

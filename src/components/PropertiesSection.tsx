@@ -14,28 +14,28 @@ const PropertiesSection = () => {
       title: "Modern Luxury Villa",
       location: "Emirates Hills",
       roi: "8-10%",
-      price: "AED 15M - 25M",
+      price: "د.إ 15M - 25M",
     },
     {
       image: propertyPenthouse,
       title: "Sky Penthouse",
       location: "Dubai Marina",
       roi: "7-9%",
-      price: "AED 8M - 18M",
+      price: "د.إ 8M - 18M",
     },
     {
       image: propertyPalm,
       title: "Beachfront Mansion",
       location: "Palm Jumeirah",
       roi: "6-8%",
-      price: "AED 25M - 50M",
+      price: "د.إ 25M - 50M",
     },
     {
       image: propertyBusinessBay,
       title: "Premium Apartment",
       location: "Business Bay",
       roi: "9-12%",
-      price: "AED 2M - 5M",
+      price: "د.إ 2M - 5M",
     },
   ];
 
