@@ -23,7 +23,7 @@ const AuthoritySection = () => {
               <div className="relative rounded-xl overflow-hidden gold-glow">
                 <img 
                   src={zubairImage} 
-                  alt="Zubair Malik - Dubai Real Estate Investment Consultant"
+                  alt="Zubair Malik - Dubai Real Estate Investment Advisor"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
                 {/* Overlay gradient */}
@@ -43,7 +43,7 @@ const AuthoritySection = () => {
             </h2>
             
             <p className="text-base sm:text-lg md:text-xl text-primary font-medium mb-4 sm:mb-6">
-              Dubai Real Estate Investment Consultant
+              Dubai Real Estate Investment Advisor
             </p>
             
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">

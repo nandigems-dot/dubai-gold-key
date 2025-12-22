@@ -23,7 +23,7 @@ const WhyZubairSection = () => {
               <span className="text-gold-gradient">Zubair</span>?
             </h2>
             <p className="text-muted-foreground text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Experience the difference of working with a dedicated investment consultant 
+              Experience the difference of working with a dedicated investment advisor 
               who prioritizes your success and long-term wealth building.
             </p>
             
@@ -48,7 +48,7 @@ const WhyZubairSection = () => {
             {[
               { value: "5+", label: "Years Experience" },
               { value: "100+", label: "Happy Clients" },
-              { value: "500M+", label: "AED Properties Sold" },
+              { value: "20M+", label: "AED Properties Sold" },
               { value: "24/7", label: "Client Support" },
             ].map((stat, index) => (
               <div 

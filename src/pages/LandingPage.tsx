@@ -230,7 +230,7 @@ const LandingPage = () => {
       {/* Minimal Footer */}
       <footer className="py-6 px-4 text-center border-t border-border/30">
         <p className="text-muted-foreground/60 text-xs">
-          Zubair Malik • Dubai Real Estate Investment Consultant
+          Zubair Malik • Dubai Real Estate Investment Advisor
         </p>
         <p className="text-muted-foreground/40 text-xs mt-1">
           Business Village Tower B, Dubai
