@@ -1,6 +1,23 @@
 import { Quote, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Developer Logos
+import nakheelLogo from "@/assets/developers/nakheel.png";
+import meraasLogo from "@/assets/developers/meraas.png";
+import emaarLogo from "@/assets/developers/emaar.png";
+import sobhaLogo from "@/assets/developers/sobha.png";
+import damacLogo from "@/assets/developers/damac.png";
+import imtiazLogo from "@/assets/developers/imtiaz.png";
+import binghattiLogo from "@/assets/developers/binghatti.png";
+import ellingtonLogo from "@/assets/developers/ellington.png";
+import beyondLogo from "@/assets/developers/beyond.png";
+import omniyatLogo from "@/assets/developers/omniyat.png";
+import aldarLogo from "@/assets/developers/aldar.png";
+import alhamraLogo from "@/assets/developers/alhamra.png";
+import rakpropertiesLogo from "@/assets/developers/rakproperties.png";
+import aqaarLogo from "@/assets/developers/aqaar.png";
+import aradaLogo from "@/assets/developers/arada.png";
+
 const TestimonialsSection = () => {
   const testimonials = [
     {
@@ -21,21 +38,21 @@ const TestimonialsSection = () => {
   ];
 
   const developers = [
-    "Nakheel",
-    "Meraas",
-    "Emaar",
-    "Sobha",
-    "Damac",
-    "Imtiaz",
-    "Binghatti",
-    "Ellington",
-    "Beyond",
-    "Omniyat",
-    "Aldar",
-    "Al Hamra Village",
-    "RAK Properties",
-    "Aqaar",
-    "Arada",
+    { name: "Nakheel", logo: nakheelLogo },
+    { name: "Meraas", logo: meraasLogo },
+    { name: "Emaar", logo: emaarLogo },
+    { name: "Sobha", logo: sobhaLogo },
+    { name: "Damac", logo: damacLogo },
+    { name: "Imtiaz", logo: imtiazLogo },
+    { name: "Binghatti", logo: binghattiLogo },
+    { name: "Ellington", logo: ellingtonLogo },
+    { name: "Beyond", logo: beyondLogo },
+    { name: "Omniyat", logo: omniyatLogo },
+    { name: "Aldar", logo: aldarLogo },
+    { name: "Al Hamra", logo: alhamraLogo },
+    { name: "RAK Properties", logo: rakpropertiesLogo },
+    { name: "Aqaar", logo: aqaarLogo },
+    { name: "Arada", logo: aradaLogo },
   ];
 
   return (
@@ -70,19 +87,24 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Developer Names */}
+        {/* Developer Logos */}
         <div className="border-t border-b border-border/50 py-8 sm:py-10 lg:py-12">
           <p className="text-center text-xs sm:text-sm text-muted-foreground mb-6 sm:mb-8 uppercase tracking-widest px-4">
             Partnering with Dubai's Premier Developers
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-8 md:gap-x-10 gap-y-3 sm:gap-y-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-6 sm:gap-8 items-center justify-items-center">
             {developers.map((developer, index) => (
-              <span 
+              <div 
                 key={index}
-                className="text-foreground/70 hover:text-primary text-sm sm:text-base font-medium transition-colors cursor-default"
+                className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[140px] h-16 sm:h-20"
               >
-                {developer}
-              </span>
+                <img 
+                  src={developer.logo} 
+                  alt={`${developer.name} logo`}
+                  className="max-h-full max-w-full object-contain"
+                  title={developer.name}
+                />
+              </div>
             ))}
           </div>
         </div>
