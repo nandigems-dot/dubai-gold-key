@@ -88,22 +88,26 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Developer Logos */}
-        <div className="border-t border-b border-border/50 py-8 sm:py-10 lg:py-12">
-          <p className="text-center text-xs sm:text-sm text-muted-foreground mb-6 sm:mb-8 uppercase tracking-widest px-4">
+        <div className="border-t border-b border-border/50 py-10 sm:py-12 lg:py-16">
+          <p className="text-center text-xs sm:text-sm text-muted-foreground mb-8 sm:mb-10 uppercase tracking-widest px-4">
             Partnering with Dubai's Premier Developers
           </p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-6 sm:gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 items-start justify-items-center">
             {developers.map((developer, index) => (
               <div 
                 key={index}
-                className="flex items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[140px] h-16 sm:h-20"
+                className="flex flex-col items-center gap-3"
               >
-                <img 
-                  src={developer.logo} 
-                  alt={`${developer.name} logo`}
-                  className="max-h-full max-w-full object-contain"
-                  title={developer.name}
-                />
+                <div className="flex items-center justify-center p-4 sm:p-5 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-[160px] h-24 sm:h-28 border border-border/20">
+                  <img 
+                    src={developer.logo} 
+                    alt={`${developer.name} logo`}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <span className="text-xs sm:text-sm font-medium text-foreground/80 text-center">
+                  {developer.name}
+                </span>
               </div>
             ))}
           </div>
