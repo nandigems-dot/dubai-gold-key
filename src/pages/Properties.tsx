@@ -88,7 +88,7 @@ const ProjectCard = ({ project, developer }: { project: Project; developer: stri
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
               </div>
               
-              <p className="text-muted-foreground text-sm mt-3 line-clamp-2">
+              <p className="text-muted-foreground text-sm mt-3">
                 {project.summary}
               </p>
               
