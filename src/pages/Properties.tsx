@@ -1,4 +1,4 @@
-import { MapPin, Building2, Home, Waves, MessageCircle, FileText, ChevronDown, Car, Plane, TreePalm } from "lucide-react";
+import { MapPin, Building2, Home, Waves, MessageCircle, FileText, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,11 +11,11 @@ import {
 import { useState } from "react";
 
 // Project Images
-import palmVillas from "@/assets/projects/palm-villas.jpg";
+import palmJebelAliVillas from "@/assets/projects/palm-jebel-ali-villas.jpg";
 import palmCentral from "@/assets/projects/palm-central.jpg";
-import emaarOasis from "@/assets/projects/emaar-oasis.jpg";
+import emaarOasisVillas from "@/assets/projects/emaar-oasis-villas.jpg";
 import emaarPolo from "@/assets/projects/emaar-polo.jpg";
-import emaarHeights from "@/assets/projects/emaar-heights.jpg";
+import heightsWellness from "@/assets/projects/heights-wellness.jpg";
 import binghattiTerraces from "@/assets/projects/binghatti-terraces.jpg";
 import binghattiVintage from "@/assets/projects/binghatti-vintage.jpg";
 import binghattiCullinan from "@/assets/projects/binghatti-cullinan.jpg";
@@ -158,6 +158,23 @@ const Properties = () => {
 
   const developers: Developer[] = [
     {
+      name: "Dubai Islands (Nakheel Masterplan)",
+      projects: [
+        {
+          name: "Dubai Islands Overview",
+          location: "Dubai Islands, Dubai, UAE – 15-20 min from Downtown, 10-15 min from DXB Airport",
+          typology: [
+            "Waterfront, beaches, promenades, islands",
+            "Direct road & bridge access",
+            "Master Developer: Nakheel"
+          ],
+          summary: "Dubai Islands is a new coastal destination offering waterfront living with city connectivity. A prime investment location with excellent infrastructure.",
+          icon: "waterfront",
+          image: dubaiIslandsAerial
+        }
+      ]
+    },
+    {
       name: "Palm Jebel Ali",
       projects: [
         {
@@ -170,7 +187,7 @@ const Properties = () => {
           ],
           summary: "Exclusive beachfront villas on Dubai's iconic Palm Jebel Ali, offering unparalleled waterfront lifestyle with private beach access.",
           icon: "villa",
-          image: palmVillas
+          image: palmJebelAliVillas
         },
         {
           name: "Palm Central Private Residences",
@@ -199,7 +216,7 @@ const Properties = () => {
           ],
           summary: "Ultra-luxury standalone villas positioned along future growth corridors, offering expansive plots with private pools and lagoon views.",
           icon: "villa",
-          image: emaarOasis
+          image: emaarOasisVillas
         },
         {
           name: "Grand Polo Club & Resort",
@@ -223,7 +240,7 @@ const Properties = () => {
           ],
           summary: "A wellness-focused family community offering villas and townhouses with health-centric designs and country club amenities.",
           icon: "villa",
-          image: emaarHeights
+          image: heightsWellness
         }
       ]
     },
@@ -338,89 +355,6 @@ const Properties = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Location Details Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-secondary/30">
-        <div className="container-luxury px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Image */}
-            <div className="order-2 lg:order-1">
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={dubaiIslandsAerial} 
-                  alt="Dubai Islands Aerial View"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-            
-            {/* Content */}
-            <div className="order-1 lg:order-2">
-              <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.2em] text-primary mb-3 font-medium">
-                Prime Location
-              </p>
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 leading-tight">
-                Dubai Islands
-              </h2>
-              <p className="text-muted-foreground text-base lg:text-lg mb-6 leading-relaxed font-sans">
-                Dubai Islands is a new coastal destination offering waterfront living with city connectivity.
-              </p>
-              
-              {/* Location Details */}
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground text-sm mb-0.5">Area</h4>
-                    <p className="text-muted-foreground text-sm font-sans">Dubai Islands, Dubai, UAE</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                    <Building2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground text-sm mb-0.5">Developer (Masterplan)</h4>
-                    <p className="text-muted-foreground text-sm font-sans">Nakheel</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                    <TreePalm className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground text-sm mb-0.5">Nature</h4>
-                    <p className="text-muted-foreground text-sm font-sans">Waterfront, beaches, promenades, islands</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Connectivity */}
-              <div className="bg-card border border-border/50 rounded-xl p-5">
-                <h4 className="font-serif text-lg font-semibold text-foreground mb-4">Connectivity</h4>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Car className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-muted-foreground font-sans">15–20 min → Downtown Dubai</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Plane className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-muted-foreground font-sans">10–15 min → DXB Airport</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <MapPin className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-muted-foreground font-sans">Direct road & bridge access</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Hero Section */}
       <section className="pt-24 pb-10 sm:pt-32 sm:pb-14 lg:pt-36 lg:pb-16">
         <div className="container-luxury">
