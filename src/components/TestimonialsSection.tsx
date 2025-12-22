@@ -1,6 +1,23 @@
 import { Quote, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Developer logos
+import nakheelLogo from "@/assets/developers/nakheel.png";
+import meraasLogo from "@/assets/developers/meraas.png";
+import emaarLogo from "@/assets/developers/emaar.png";
+import sobhaLogo from "@/assets/developers/sobha.png";
+import damacLogo from "@/assets/developers/damac.png";
+import imtiazLogo from "@/assets/developers/imtiaz.png";
+import binghattiLogo from "@/assets/developers/binghatti.png";
+import ellingtonLogo from "@/assets/developers/ellington.png";
+import beyondLogo from "@/assets/developers/beyond.png";
+import omniyatLogo from "@/assets/developers/omniyat.png";
+import aldarLogo from "@/assets/developers/aldar.png";
+import alhamraLogo from "@/assets/developers/alhamra.png";
+import rakpropertiesLogo from "@/assets/developers/rakproperties.png";
+import aqaarLogo from "@/assets/developers/aqaar.png";
+import aradaLogo from "@/assets/developers/arada.png";
+
 const TestimonialsSection = () => {
   const testimonials = [
     {
@@ -21,21 +38,21 @@ const TestimonialsSection = () => {
   ];
 
   const developers = [
-    { name: "Nakheel", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nakheel_logo.svg/200px-Nakheel_logo.svg.png" },
-    { name: "Meraas", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Meraas_logo.svg/200px-Meraas_logo.svg.png" },
-    { name: "Emaar", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Emaar_Properties_logo.svg/200px-Emaar_Properties_logo.svg.png" },
-    { name: "Sobha", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sobha_Limited_logo.svg/200px-Sobha_Limited_logo.svg.png" },
-    { name: "Damac", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Damac_Properties_logo.svg/200px-Damac_Properties_logo.svg.png" },
-    { name: "Imtiaz", logo: null },
-    { name: "Binghatti", logo: null },
-    { name: "Ellington", logo: null },
-    { name: "Beyond", logo: null },
-    { name: "Omniyat", logo: null },
-    { name: "Aldar", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Aldar_Properties_logo.svg/200px-Aldar_Properties_logo.svg.png" },
-    { name: "Al Hamra Village", logo: null },
-    { name: "RAK Properties", logo: null },
-    { name: "Aqaar", logo: null },
-    { name: "Arada", logo: null },
+    { name: "Nakheel", logo: nakheelLogo },
+    { name: "Meraas", logo: meraasLogo },
+    { name: "Emaar", logo: emaarLogo },
+    { name: "Sobha", logo: sobhaLogo },
+    { name: "Damac", logo: damacLogo },
+    { name: "Imtiaz", logo: imtiazLogo },
+    { name: "Binghatti", logo: binghattiLogo },
+    { name: "Ellington", logo: ellingtonLogo },
+    { name: "Beyond", logo: beyondLogo },
+    { name: "Omniyat", logo: omniyatLogo },
+    { name: "Aldar", logo: aldarLogo },
+    { name: "Al Hamra Village", logo: alhamraLogo },
+    { name: "RAK Properties", logo: rakpropertiesLogo },
+    { name: "Aqaar", logo: aqaarLogo },
+    { name: "Arada", logo: aradaLogo },
   ];
 
   return (
@@ -75,30 +92,18 @@ const TestimonialsSection = () => {
           <p className="text-center text-xs sm:text-sm text-muted-foreground mb-6 sm:mb-8 uppercase tracking-widest px-4">
             Partnering with Dubai's Premier Developers
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {developers.map((developer, index) => (
               <div 
                 key={index}
-                className="flex items-center justify-center h-10 sm:h-12 px-3 sm:px-4 hover:opacity-100 transition-opacity"
+                className="flex items-center justify-center h-12 sm:h-14 px-2 opacity-70 hover:opacity-100 transition-opacity"
+                title={developer.name}
               >
-                {developer.logo ? (
-                  <img 
-                    src={developer.logo} 
-                    alt={`${developer.name} logo`}
-                    className="h-6 sm:h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity brightness-0 invert"
-                    onError={(e) => {
-                      // Fallback to text if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      target.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                ) : null}
-                <span 
-                  className={`text-sm sm:text-base md:text-lg font-serif font-bold text-muted-foreground/50 hover:text-primary transition-colors ${developer.logo ? 'hidden' : ''}`}
-                >
-                  {developer.name}
-                </span>
+                <img 
+                  src={developer.logo} 
+                  alt={`${developer.name} logo`}
+                  className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                />
               </div>
             ))}
           </div>
