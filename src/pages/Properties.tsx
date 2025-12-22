@@ -16,7 +16,7 @@ import palmCentral from "@/assets/projects/palm-central.jpg";
 import emaarOasisVillas from "@/assets/projects/emaar-oasis-villas.jpg";
 import emaarPolo from "@/assets/projects/emaar-polo.jpg";
 import heightsWellness from "@/assets/projects/heights-wellness.jpg";
-import binghattiTerraces from "@/assets/projects/binghatti-terraces.jpg";
+import binghattiTerraces from "@/assets/projects/binghatti-terraces-motorcity.jpg";
 import binghattiVintage from "@/assets/projects/binghatti-vintage.jpg";
 import binghattiCullinan from "@/assets/projects/binghatti-cullinan.jpg";
 import sobhaElwood from "@/assets/projects/sobha-elwood.jpg";
@@ -175,11 +175,11 @@ const Properties = () => {
       ]
     },
     {
-      name: "Palm Jebel Ali",
+      name: "Palm Jebel Ali (Nakheel)",
       projects: [
         {
           name: "Palm Jebel Ali Villas",
-          location: "Premium fronds of Palm Jebel Ali – direct beachfront and waterfront living",
+          location: "Offshore Dubai, Jebel Ali – between Port Jebel Ali & Jebel Ali Marine Sanctuary, via Sheikh Zayed Road (E11)",
           typology: [
             "5-6 Bedroom Beach Villas",
             "7-Bedroom Coral Villas (premium)",
@@ -191,7 +191,7 @@ const Properties = () => {
         },
         {
           name: "Palm Central Private Residences",
-          location: "Between Fronds M & N on Palm Jebel Ali's central spine",
+          location: "Palm Jebel Ali (Palm Spine), positioned between Fronds M & N",
           typology: [
             "1–5 Bedroom Apartments",
             "Townhouses",
@@ -209,7 +209,7 @@ const Properties = () => {
       projects: [
         {
           name: "The Oasis by Emaar",
-          location: "Along Dubai–Al Ain Road – 20 mins from Downtown Dubai",
+          location: "DubaiLand master community, near Dubai Investment Park & Jumeirah Golf Estates connectivity zone",
           typology: [
             "4, 5 & 6-bedroom ultra-luxury standalone villas",
             "Large plots with private pools & lagoons"
@@ -220,7 +220,7 @@ const Properties = () => {
         },
         {
           name: "Grand Polo Club & Resort",
-          location: "Near Dubai Investment Park – Strategic access to Expo City & Al Maktoum Airport",
+          location: "Near Expo Road (E77) & Emirates Road (E611) junction, Dubai South / Al Yalayis-side",
           typology: [
             "Luxury villas & townhouses",
             "Polo-themed lifestyle community",
@@ -232,7 +232,7 @@ const Properties = () => {
         },
         {
           name: "The Heights Country Club & Wellness",
-          location: "Near Expo City Dubai – Close to E611 & E77 highways",
+          location: "Emirates Road (E611) in Dubailand, Al Yalayis 5, bordered by E611 & Jebel Ali–Lehbab Road (E77)",
           typology: [
             "3–5 bedroom villas & townhouses",
             "Wellness-centric layouts",
@@ -249,37 +249,37 @@ const Properties = () => {
       projects: [
         {
           name: "Binghatti Terraces",
-          location: "Meydan / Nad Al Sheba – Close to Downtown Dubai & Business Bay",
+          location: "Motor City, Dubai – prime motorsport lifestyle community",
           typology: [
             "Studio, 1 & 2 Bedroom Apartments",
             "Mid-rise residential tower",
             "Contemporary Binghatti design language"
           ],
-          summary: "A mid-rise residential tower featuring Binghatti's signature contemporary design with excellent connectivity to Downtown Dubai.",
+          summary: "A mid-rise residential tower featuring Binghatti's signature contemporary design in the vibrant Motor City community.",
           icon: "apartment",
           image: binghattiTerraces
         },
         {
           name: "Binghatti Vintage",
-          location: "Jumeirah Village Circle (JVC) – One of Dubai's highest rental-demand zones",
+          location: "Majan, Dubailand – emerging residential community",
           typology: [
             "Studios, 1 & 2 Bedroom Apartments",
             "Classic + modern architectural blend",
             "Smart layouts with balconies"
           ],
-          summary: "Classic meets modern in this JVC development, located in one of Dubai's most sought-after rental communities.",
+          summary: "Classic meets modern in this Majan development, located in one of Dubailand's emerging residential communities.",
           icon: "apartment",
           image: binghattiVintage
         },
         {
           name: "Binghatti Cullinan",
-          location: "Business Bay – Minutes from Downtown & Dubai Mall",
+          location: "Al Jaddaf, Dubai – Dubai Creek-side area with cultural district access",
           typology: [
             "Luxury 1, 2 & 3 Bedroom Apartments",
             "Signature architectural landmark",
             "High-end finishes & amenities"
           ],
-          summary: "A signature architectural landmark in Business Bay offering luxury apartments with premium finishes and world-class amenities.",
+          summary: "A signature architectural landmark in Al Jaddaf offering luxury apartments with premium finishes and Dubai Creek views.",
           icon: "apartment",
           image: binghattiCullinan
         }
@@ -290,7 +290,7 @@ const Properties = () => {
       projects: [
         {
           name: "Sobha Elwood",
-          location: "Dubailand, along Al Ain Road / Sheikh Mohammed Bin Zayed Road (E311)",
+          location: "Dubailand, near Dubai–Al Ain Road corridor, IMG Worlds of Adventure & Sheikh Mohammed Bin Zayed Road (E311)",
           typology: [
             "Luxury villa community",
             "Strategic access to Downtown Dubai, Dubai Silicon Oasis",
@@ -307,7 +307,7 @@ const Properties = () => {
       projects: [
         {
           name: "Hado by Beyond",
-          location: "SIORA, Dubai Islands (formerly Deira Islands) – North Beach with direct waterfront access",
+          location: "SIORA district (Island B), Dubai Islands – direct waterfront access",
           typology: [
             "Premium apartments across three residential towers",
             "Coastal design language",
@@ -325,25 +325,25 @@ const Properties = () => {
       projects: [
         {
           name: "The Symphony by Imtiaz",
-          location: "Jumeirah Village Triangle (JVT) – Easy access to Sheikh Mohammed Bin Zayed Road",
+          location: "Meydan Horizon, MBR City (Meydan), Dubai",
           typology: [
             "Studio, 1 & 2 Bedroom Apartments",
             "Boutique mid-rise residential building",
             "Balconies + smart layouts"
           ],
-          summary: "A boutique mid-rise development in JVT offering smart apartment layouts close to Dubai Marina and Internet City.",
+          summary: "A boutique mid-rise development in Meydan Horizon offering smart apartment layouts in the prestigious MBR City.",
           icon: "apartment",
           image: imtiazSymphony
         },
         {
           name: "Le Blanc by Imtiaz",
-          location: "Jumeirah Village Circle (JVC) – One of Dubai's highest rental-demand communities",
+          location: "DubaiLand Residence Complex (DLRC), Wadi Al Safa 5, Dubailand",
           typology: [
             "Studios, 1 & 2 Bedroom Apartments",
             "European-inspired white & gold interiors",
             "Premium finishes, large windows"
           ],
-          summary: "European-inspired residences with elegant white and gold interiors, featuring premium finishes in high-demand JVC.",
+          summary: "European-inspired residences with elegant white and gold interiors, featuring premium finishes in DLRC Dubailand.",
           icon: "apartment",
           image: imtiazLeblanc
         }
