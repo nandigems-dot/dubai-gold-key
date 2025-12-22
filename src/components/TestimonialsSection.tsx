@@ -38,21 +38,21 @@ const TestimonialsSection = () => {
   ];
 
   const developers = [
-    { name: "Nakheel", logo: nakheelLogo },
-    { name: "Meraas", logo: meraasLogo },
-    { name: "Emaar", logo: emaarLogo },
-    { name: "Sobha", logo: sobhaLogo },
-    { name: "Damac", logo: damacLogo },
-    { name: "Imtiaz", logo: imtiazLogo },
-    { name: "Binghatti", logo: binghattiLogo },
-    { name: "Ellington", logo: ellingtonLogo },
-    { name: "Beyond", logo: beyondLogo },
-    { name: "Omniyat", logo: omniyatLogo },
-    { name: "Aldar", logo: aldarLogo },
-    { name: "Al Hamra", logo: alhamraLogo },
-    { name: "RAK Properties", logo: rakpropertiesLogo },
-    { name: "Aqaar", logo: aqaarLogo },
-    { name: "Arada", logo: aradaLogo },
+    { name: "Nakheel", logo: nakheelLogo, scale: "scale-100" },
+    { name: "Meraas", logo: meraasLogo, scale: "scale-100" },
+    { name: "Emaar", logo: emaarLogo, scale: "scale-100" },
+    { name: "Sobha", logo: sobhaLogo, scale: "scale-100" },
+    { name: "Damac", logo: damacLogo, scale: "scale-100" },
+    { name: "Imtiaz", logo: imtiazLogo, scale: "scale-100" },
+    { name: "Binghatti", logo: binghattiLogo, scale: "scale-90" },
+    { name: "Ellington", logo: ellingtonLogo, scale: "scale-100" },
+    { name: "Beyond", logo: beyondLogo, scale: "scale-100" },
+    { name: "Omniyat", logo: omniyatLogo, scale: "scale-100" },
+    { name: "Aldar", logo: aldarLogo, scale: "scale-75" },
+    { name: "Al Hamra", logo: alhamraLogo, scale: "scale-100" },
+    { name: "RAK Properties", logo: rakpropertiesLogo, scale: "scale-150" },
+    { name: "Aqaar", logo: aqaarLogo, scale: "scale-110" },
+    { name: "Arada", logo: aradaLogo, scale: "scale-100" },
   ];
 
   return (
@@ -98,11 +98,11 @@ const TestimonialsSection = () => {
                 key={index}
                 className="flex flex-col items-center gap-3"
               >
-                <div className="flex items-center justify-center p-4 sm:p-5 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-[160px] h-24 sm:h-28 border border-border/20">
+                <div className="flex items-center justify-center p-4 sm:p-5 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-[160px] h-24 sm:h-28 border border-border/20 overflow-hidden">
                   <img 
                     src={developer.logo} 
                     alt={`${developer.name} logo`}
-                    className="max-h-full max-w-full object-contain"
+                    className={`max-h-full max-w-full object-contain ${developer.scale}`}
                   />
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-foreground/80 text-center">
