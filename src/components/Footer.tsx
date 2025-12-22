@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -61,14 +61,6 @@ const Footer = () => {
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
               >
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
-              <a 
-                href="https://www.facebook.com/Zubair.Malik"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
-              >
-                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
