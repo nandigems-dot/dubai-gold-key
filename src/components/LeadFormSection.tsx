@@ -99,7 +99,7 @@ const LeadFormSection = () => {
           Get <span className="gold-gradient-text">Exclusive</span> Property Deals
         </h2>
         <p className="text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8 px-2">
-          Fill the form below for a free consultation with our investment experts
+          Fill the form below for a free advisory session with our investment experts
         </p>
 
         <div className="glass-card rounded-xl p-5 sm:p-6 md:p-8 border border-border/50">
