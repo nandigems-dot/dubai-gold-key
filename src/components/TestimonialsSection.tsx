@@ -2,21 +2,16 @@ import { Quote, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Developer Logos
-import nakheelLogo from "@/assets/developers/nakheel.png";
+import nakheelLogo from "@/assets/developers/nakheel.jpg";
 import meraasLogo from "@/assets/developers/meraas.png";
-import emaarLogo from "@/assets/developers/emaar.png";
+import emaarLogo from "@/assets/developers/emaar.jpg";
 import sobhaLogo from "@/assets/developers/sobha.png";
 import damacLogo from "@/assets/developers/damac.png";
-import imtiazLogo from "@/assets/developers/imtiaz.png";
-import binghattiLogo from "@/assets/developers/binghatti.png";
+import imtiazLogo from "@/assets/developers/imtiaz.jpg";
+import binghattiLogo from "@/assets/developers/binghatti.jpg";
 import ellingtonLogo from "@/assets/developers/ellington.png";
 import beyondLogo from "@/assets/developers/beyond.png";
-import omniyatLogo from "@/assets/developers/omniyat.png";
 import aldarLogo from "@/assets/developers/aldar.png";
-import alhamraLogo from "@/assets/developers/alhamra.png";
-import rakpropertiesLogo from "@/assets/developers/rakproperties.png";
-import aqaarLogo from "@/assets/developers/aqaar.png";
-import aradaLogo from "@/assets/developers/arada.png";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -47,12 +42,7 @@ const TestimonialsSection = () => {
     { name: "Binghatti", logo: binghattiLogo, scale: "scale-90" },
     { name: "Ellington", logo: ellingtonLogo, scale: "scale-100" },
     { name: "Beyond", logo: beyondLogo, scale: "scale-100" },
-    { name: "Omniyat", logo: omniyatLogo, scale: "scale-100" },
     { name: "Aldar", logo: aldarLogo, scale: "scale-75" },
-    { name: "Al Hamra", logo: alhamraLogo, scale: "scale-100" },
-    { name: "RAK Properties", logo: rakpropertiesLogo, scale: "scale-150" },
-    { name: "Aqaar", logo: aqaarLogo, scale: "scale-110" },
-    { name: "Arada", logo: aradaLogo, scale: "scale-100" },
   ];
 
   return (
