@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
     { name: "Binghatti", logo: binghattiLogo, scale: "scale-125", bgClass: "bg-white" },
     { name: "Ellington", logo: ellingtonLogo, scale: "scale-110", bgClass: "bg-white" },
     { name: "Beyond", logo: beyondLogo, scale: "scale-110", bgClass: "bg-white" },
-    { name: "Aldar", logo: aldarLogo, scale: "scale-150", bgClass: "bg-white" },
+    { name: "Aldar", logo: aldarLogo, scale: "scale-100", bgClass: "bg-white" },
   ];
 
   return (
