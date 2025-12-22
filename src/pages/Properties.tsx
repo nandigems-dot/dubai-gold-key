@@ -20,6 +20,8 @@ import binghattiTerraces from "@/assets/projects/binghatti-terraces-motorcity.jp
 import binghattiVintage from "@/assets/projects/binghatti-vintage.jpg";
 import binghattiCullinan from "@/assets/projects/binghatti-cullinan.jpg";
 import sobhaElwood from "@/assets/projects/sobha-elwood.jpg";
+import sobhaCentral from "@/assets/projects/sobha-central.jpg";
+import sobhaSiniyaIsland from "@/assets/projects/sobha-siniya-island.png";
 import beyondHado from "@/assets/projects/beyond-hado.jpg";
 import imtiazSymphony from "@/assets/projects/imtiaz-symphony.jpg";
 import imtiazLeblanc from "@/assets/projects/imtiaz-leblanc.jpg";
@@ -526,7 +528,7 @@ const Properties = () => {
           location: "Sheikh Zayed Road, Dubai, UAE",
           summary: "Luxury residential community by Sobha Realty, offering premium apartments with breathtaking urban and skyline views.",
           icon: "apartment",
-          image: sobhaElwood,
+          image: sobhaCentral,
           details: {
             location: "Sheikh Zayed Road, Dubai, UAE — a prime address with direct connectivity to the city's commercial hubs, skyline and metro links.",
             overview: [
@@ -556,7 +558,7 @@ const Properties = () => {
           location: "Siniya Island, Umm Al Quwain, UAE",
           summary: "Ultra-luxury island community by Sobha Realty, combining untouched natural beauty with resort-style living and world-class amenities.",
           icon: "waterfront",
-          image: sobhaElwood,
+          image: sobhaSiniyaIsland,
           details: {
             location: "Siniya Island, Umm Al Quwain, UAE — an exclusive island destination offering secluded luxury living amidst nature and crystal-clear waters.",
             overview: [
