@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,14 +53,42 @@ const Footer = () => {
           {/* Social */}
           <div className="text-center sm:text-left">
             <h4 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Follow</h4>
-            <div className="flex gap-3 sm:gap-4 justify-center sm:justify-start">
+            <div className="flex gap-3 sm:gap-4 justify-center sm:justify-start flex-wrap">
               <a 
                 href="https://www.instagram.com/zubair_realtor_dxb/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+              </a>
+              <a 
+                href="https://www.facebook.com/share/17vy7Ke1W7/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/mzubairrealtor?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@ZubairRealtorDxB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>

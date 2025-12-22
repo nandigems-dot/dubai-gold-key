@@ -16,7 +16,7 @@ import palmCentral from "@/assets/projects/palm-central.jpg";
 import emaarOasisVillas from "@/assets/projects/emaar-oasis-villas.jpg";
 import emaarPolo from "@/assets/projects/emaar-polo.jpg";
 import heightsWellness from "@/assets/projects/heights-wellness.jpg";
-import binghattiTerraces from "@/assets/projects/binghatti-terraces-motorcity.jpg";
+import binghattiTerraces from "@/assets/projects/binghatti-sky-terraces.png";
 import binghattiVintage from "@/assets/projects/binghatti-vintage.jpg";
 import binghattiCullinan from "@/assets/projects/binghatti-cullinan.jpg";
 import sobhaElwood from "@/assets/projects/sobha-elwood.jpg";
