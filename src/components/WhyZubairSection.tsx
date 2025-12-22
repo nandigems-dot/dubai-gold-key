@@ -48,7 +48,7 @@ const WhyZubairSection = () => {
             {[
               { value: "5+", label: "Years Experience" },
               { value: "100+", label: "Happy Clients" },
-              { value: "₹500Cr+", label: "Properties Sold" },
+              { value: "500M+", label: "AED Properties Sold" },
               { value: "24/7", label: "Client Support" },
             ].map((stat, index) => (
               <div 

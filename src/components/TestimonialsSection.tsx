@@ -1,58 +1,41 @@
 import { Quote, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Developer logos
-import nakheelLogo from "@/assets/developers/nakheel.png";
-import meraasLogo from "@/assets/developers/meraas.png";
-import emaarLogo from "@/assets/developers/emaar.png";
-import sobhaLogo from "@/assets/developers/sobha.png";
-import damacLogo from "@/assets/developers/damac.png";
-import imtiazLogo from "@/assets/developers/imtiaz.png";
-import binghattiLogo from "@/assets/developers/binghatti.png";
-import ellingtonLogo from "@/assets/developers/ellington.png";
-import beyondLogo from "@/assets/developers/beyond.png";
-import omniyatLogo from "@/assets/developers/omniyat.png";
-import aldarLogo from "@/assets/developers/aldar.png";
-import alhamraLogo from "@/assets/developers/alhamra.png";
-import rakpropertiesLogo from "@/assets/developers/rakproperties.png";
-import aqaarLogo from "@/assets/developers/aqaar.png";
-import aradaLogo from "@/assets/developers/arada.png";
-
 const TestimonialsSection = () => {
   const testimonials = [
     {
       quote: "Zubair made my first Dubai investment seamless. His knowledge of the market and transparent approach gave me complete confidence.",
-      author: "Rajesh K.",
-      location: "Mumbai, India",
+      author: "Khalid A.",
+      location: "Abu Dhabi, UAE",
     },
     {
       quote: "Exceptional service! Got early access to an off-plan project that's already appreciated 15%. Highly recommend Zubair for Dubai investments.",
-      author: "Sarah M.",
-      location: "London, UK",
+      author: "Fatima R.",
+      location: "Dubai, UAE",
     },
     {
       quote: "Professional, knowledgeable, and always available. Zubair helped me secure my Golden Visa through a smart property investment.",
-      author: "Ahmed H.",
-      location: "Riyadh, Saudi Arabia",
+      author: "Mohammed H.",
+      location: "Sharjah, UAE",
     },
   ];
 
   const developers = [
-    { name: "Nakheel", logo: nakheelLogo },
-    { name: "Meraas", logo: meraasLogo },
-    { name: "Emaar", logo: emaarLogo },
-    { name: "Sobha", logo: sobhaLogo },
-    { name: "Damac", logo: damacLogo },
-    { name: "Imtiaz", logo: imtiazLogo },
-    { name: "Binghatti", logo: binghattiLogo },
-    { name: "Ellington", logo: ellingtonLogo },
-    { name: "Beyond", logo: beyondLogo },
-    { name: "Omniyat", logo: omniyatLogo },
-    { name: "Aldar", logo: aldarLogo },
-    { name: "Al Hamra Village", logo: alhamraLogo },
-    { name: "RAK Properties", logo: rakpropertiesLogo },
-    { name: "Aqaar", logo: aqaarLogo },
-    { name: "Arada", logo: aradaLogo },
+    "Nakheel",
+    "Meraas",
+    "Emaar",
+    "Sobha",
+    "Damac",
+    "Imtiaz",
+    "Binghatti",
+    "Ellington",
+    "Beyond",
+    "Omniyat",
+    "Aldar",
+    "Al Hamra Village",
+    "RAK Properties",
+    "Aqaar",
+    "Arada",
   ];
 
   return (
@@ -64,7 +47,7 @@ const TestimonialsSection = () => {
             Testimonials
           </p>
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-            Trusted by Global Investors
+            Trusted by UAE Investors
           </h2>
         </div>
 
@@ -87,24 +70,19 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Developer Logos */}
+        {/* Developer Names */}
         <div className="border-t border-b border-border/50 py-8 sm:py-10 lg:py-12">
           <p className="text-center text-xs sm:text-sm text-muted-foreground mb-6 sm:mb-8 uppercase tracking-widest px-4">
             Partnering with Dubai's Premier Developers
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-8 md:gap-x-10 gap-y-3 sm:gap-y-4">
             {developers.map((developer, index) => (
-              <div 
+              <span 
                 key={index}
-                className="flex items-center justify-center h-12 sm:h-14 px-2 opacity-70 hover:opacity-100 transition-opacity"
-                title={developer.name}
+                className="text-foreground/70 hover:text-primary text-sm sm:text-base font-medium transition-colors cursor-default"
               >
-                <img 
-                  src={developer.logo} 
-                  alt={`${developer.name} logo`}
-                  className="h-8 sm:h-10 md:h-12 w-auto object-contain"
-                />
-              </div>
+                {developer}
+              </span>
             ))}
           </div>
         </div>
