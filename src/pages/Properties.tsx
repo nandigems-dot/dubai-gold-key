@@ -1,8 +1,8 @@
-import { MapPin, Building2, Home, Waves, MessageCircle, FileText, ChevronDown } from "lucide-react";
+import { MapPin, Building2, Home, Waves, MessageCircle, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+
 import {
   Collapsible,
   CollapsibleContent,
@@ -53,9 +53,6 @@ const ProjectCard = ({ project, developer }: { project: Project; developer: stri
     }
   };
 
-  const scrollToForm = () => {
-    window.location.href = "/#contact";
-  };
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
@@ -105,44 +102,45 @@ const ProjectCard = ({ project, developer }: { project: Project; developer: stri
         <CollapsibleContent>
           <div className="px-4 pb-5 md:px-6 md:pb-6 border-t border-border/30">
             <div className="pt-4 space-y-4">
-              {/* Typology */}
+              {/* Description */}
               <div>
-                <h4 className="text-sm font-semibold text-foreground mb-2">Available Units</h4>
-                <ul className="space-y-1.5">
-                  {project.typology.map((type, typeIndex) => (
-                    <li key={typeIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                      {type}
-                    </li>
-                  ))}
-                </ul>
+                <h4 className="text-sm font-semibold text-foreground mb-2">Description</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {project.summary}
+                </p>
               </div>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              {/* Keywords / Typology */}
+              <div>
+                <h4 className="text-sm font-semibold text-foreground mb-2">Key Features</h4>
+                <div className="flex flex-wrap gap-2">
+                  {project.typology.map((type, typeIndex) => (
+                    <span 
+                      key={typeIndex} 
+                      className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium"
+                    >
+                      {type}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Single CTA */}
+              <div className="pt-2">
                 <Button 
                   asChild
                   variant="default"
                   size="sm"
-                  className="gap-2"
+                  className="gap-2 w-full sm:w-auto"
                 >
                   <a 
-                    href={`https://wa.me/971529504782?text=Hi%20Zubair,%20I'm%20interested%20in%20${encodeURIComponent(project.name)}%20by%20${encodeURIComponent(developer)}.%20Please%20share%20price%20and%20availability.`}
+                    href={`https://wa.me/971529504782?text=Hi%20Zubair,%20I%20am%20interested%20in%20${encodeURIComponent(project.name)}%20by%20${encodeURIComponent(developer)}.%20Could%20you%20please%20share%20the%20price%20and%20availability%20details?%20Thank%20you.`}
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
                     <MessageCircle className="w-4 h-4" />
                     Get Price & Availability
                   </a>
-                </Button>
-                <Button 
-                  variant="outline"
-                  size="sm"
-                  className="gap-2"
-                  onClick={scrollToForm}
-                >
-                  <FileText className="w-4 h-4" />
-                  Talk to Property Advisor
                 </Button>
               </div>
             </div>
@@ -403,28 +401,7 @@ const Properties = () => {
         </div>
       </section>
 
-      {/* Sticky CTA */}
-      <div className="fixed bottom-4 left-4 right-4 sm:bottom-6 sm:left-auto sm:right-6 z-40">
-        <div className="bg-card/95 backdrop-blur-sm border border-border/50 rounded-xl p-4 shadow-lg max-w-sm mx-auto sm:mx-0 sm:ml-auto">
-          <p className="text-sm text-foreground font-medium mb-3">
-            Looking for the right Dubai investment?
-          </p>
-          <Button 
-            asChild
-            variant="default"
-            className="w-full gap-2"
-            size="sm"
-          >
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4" />
-              Talk to an Expert
-            </a>
-          </Button>
-        </div>
-      </div>
-
       <Footer />
-      <WhatsAppButton />
     </main>
   );
 };
