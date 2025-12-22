@@ -82,7 +82,7 @@ const ProjectCard = ({ project, developer }: { project: Project; developer: stri
                   </h3>
                   <div className="flex items-start gap-1.5 text-muted-foreground text-xs md:text-sm">
                     <MapPin className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
-                    <span className="line-clamp-2">{project.location}</span>
+                    <span>{project.location}</span>
                   </div>
                 </div>
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
