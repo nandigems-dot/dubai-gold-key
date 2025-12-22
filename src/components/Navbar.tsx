@@ -39,7 +39,7 @@ const Navbar = () => {
             <span className="text-primary">Z</span>ubair <span className="text-primary">M</span>alik
           </span>
           <span className="text-[10px] sm:text-xs text-muted-foreground tracking-wide">
-            Property Investment Adviser
+            Property Investment Advisor
           </span>
         </Link>
 

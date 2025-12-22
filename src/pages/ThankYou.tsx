@@ -73,7 +73,7 @@ const ThankYou = () => {
       {/* Minimal Footer */}
       <footer className="py-6 px-4 text-center border-t border-border/30">
         <p className="text-muted-foreground/60 text-xs">
-          Zubair Malik • Dubai Real Estate Investment Consultant
+          Zubair Malik • Dubai Real Estate Investment Advisor
         </p>
       </footer>
     </div>

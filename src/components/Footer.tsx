@@ -69,7 +69,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-border/50 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center">
           <p className="text-xs sm:text-sm text-muted-foreground px-4">
-            © {currentYear} Zubair Malik. All rights reserved. Dubai Real Estate Investment Consultant.
+            © {currentYear} Zubair Malik. All rights reserved. Dubai Real Estate Investment Advisor.
           </p>
         </div>
       </div>
