@@ -19,7 +19,7 @@ const ServicesSection = () => {
     },
     {
       icon: FileCheck,
-      title: "Golden Visa Consultation",
+      title: "Golden Visa Advisory",
       description: "Expert guidance on visa eligibility through property investment",
     },
     {
