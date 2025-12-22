@@ -61,10 +61,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        red: {
+          DEFAULT: "hsl(var(--red))",
+          light: "hsl(var(--red-light))",
+          dark: "hsl(var(--red-dark))",
         },
         navy: {
           DEFAULT: "hsl(var(--navy))",
@@ -93,20 +93,20 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
-        "pulse-gold": {
-          "0%, 100%": { boxShadow: "0 0 20px hsla(45, 80%, 55%, 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsla(45, 80%, 55%, 0.5)" },
+        "pulse-red": {
+          "0%, 100%": { boxShadow: "0 0 20px hsla(0, 72%, 51%, 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsla(0, 72%, 51%, 0.5)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 3s ease-in-out infinite",
-        "pulse-gold": "pulse-gold 2s ease-in-out infinite",
+        "pulse-red": "pulse-red 2s ease-in-out infinite",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-gold': 'linear-gradient(135deg, hsl(45 80% 55%), hsl(38 85% 45%))',
+        'gradient-red': 'linear-gradient(135deg, hsl(0 72% 51%), hsl(0 80% 40%))',
       },
     },
   },
