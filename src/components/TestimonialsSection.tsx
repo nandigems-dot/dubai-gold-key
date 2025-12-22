@@ -33,16 +33,16 @@ const TestimonialsSection = () => {
   ];
 
   const developers = [
-    { name: "Nakheel", logo: nakheelLogo, scale: "scale-100", bgClass: "bg-[#0d2e3f]" },
-    { name: "Meraas", logo: meraasLogo, scale: "scale-90", bgClass: "bg-white" },
-    { name: "Emaar", logo: emaarLogo, scale: "scale-100", bgClass: "bg-white" },
-    { name: "Sobha", logo: sobhaLogo, scale: "scale-100", bgClass: "bg-white" },
-    { name: "Damac", logo: damacLogo, scale: "scale-100", bgClass: "bg-white" },
-    { name: "Imtiaz", logo: imtiazLogo, scale: "scale-100", bgClass: "bg-white" },
-    { name: "Binghatti", logo: binghattiLogo, scale: "scale-90", bgClass: "bg-white" },
-    { name: "Ellington", logo: ellingtonLogo, scale: "scale-90", bgClass: "bg-white" },
-    { name: "Beyond", logo: beyondLogo, scale: "scale-90", bgClass: "bg-white" },
-    { name: "Aldar", logo: aldarLogo, scale: "scale-75", bgClass: "bg-white" },
+    { name: "Nakheel", logo: nakheelLogo, scale: "scale-110", bgClass: "bg-[#0d2e3f]" },
+    { name: "Meraas", logo: meraasLogo, scale: "scale-110", bgClass: "bg-white" },
+    { name: "Emaar", logo: emaarLogo, scale: "scale-110", bgClass: "bg-white" },
+    { name: "Sobha", logo: sobhaLogo, scale: "scale-150", bgClass: "bg-white" },
+    { name: "Damac", logo: damacLogo, scale: "scale-125", bgClass: "bg-white" },
+    { name: "Imtiaz", logo: imtiazLogo, scale: "scale-125", bgClass: "bg-white" },
+    { name: "Binghatti", logo: binghattiLogo, scale: "scale-125", bgClass: "bg-white" },
+    { name: "Ellington", logo: ellingtonLogo, scale: "scale-110", bgClass: "bg-white" },
+    { name: "Beyond", logo: beyondLogo, scale: "scale-110", bgClass: "bg-white" },
+    { name: "Aldar", logo: aldarLogo, scale: "scale-110", bgClass: "bg-white" },
   ];
 
   return (
