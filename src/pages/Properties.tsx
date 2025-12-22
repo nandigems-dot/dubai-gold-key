@@ -10,6 +10,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+// Project Images
+import palmVillas from "@/assets/projects/palm-villas.jpg";
+import palmCentral from "@/assets/projects/palm-central.jpg";
+import emaarOasis from "@/assets/projects/emaar-oasis.jpg";
+import emaarPolo from "@/assets/projects/emaar-polo.jpg";
+import emaarHeights from "@/assets/projects/emaar-heights.jpg";
+import binghattiTerraces from "@/assets/projects/binghatti-terraces.jpg";
+import binghattiVintage from "@/assets/projects/binghatti-vintage.jpg";
+import binghattiCullinan from "@/assets/projects/binghatti-cullinan.jpg";
+import sobhaElwood from "@/assets/projects/sobha-elwood.jpg";
+import beyondHado from "@/assets/projects/beyond-hado.jpg";
+import imtiazSymphony from "@/assets/projects/imtiaz-symphony.jpg";
+import imtiazLeblanc from "@/assets/projects/imtiaz-leblanc.jpg";
+
 const Properties = () => {
   const whatsappLink = "https://wa.me/971529504782?text=Hi%20Zubair,%20I'm%20interested%20in%20learning%20more%20about%20Dubai%20property%20investments.";
 
@@ -26,7 +40,8 @@ const Properties = () => {
             "Large Plots Available for custom design"
           ],
           summary: "Exclusive beachfront villas on Dubai's iconic Palm Jebel Ali, offering unparalleled waterfront lifestyle with private beach access.",
-          icon: "villa"
+          icon: "villa",
+          image: palmVillas
         },
         {
           name: "Palm Central Private Residences",
@@ -38,7 +53,8 @@ const Properties = () => {
             "Beach House Style Units (4-bed + direct beach access)"
           ],
           summary: "Contemporary resort-style residences across three mid-rise buildings with direct beach access and premium amenities.",
-          icon: "apartment"
+          icon: "apartment",
+          image: palmCentral
         }
       ]
     },
@@ -53,7 +69,8 @@ const Properties = () => {
             "Large plots with private pools & lagoons"
           ],
           summary: "Ultra-luxury standalone villas positioned along future growth corridors, offering expansive plots with private pools and lagoon views.",
-          icon: "villa"
+          icon: "villa",
+          image: emaarOasis
         },
         {
           name: "Grand Polo Club & Resort",
@@ -64,7 +81,8 @@ const Properties = () => {
             "Green open spaces + equestrian facilities"
           ],
           summary: "A prestigious polo-themed lifestyle community featuring luxury villas and townhouses with equestrian facilities and expansive green spaces.",
-          icon: "villa"
+          icon: "villa",
+          image: emaarPolo
         },
         {
           name: "The Heights Country Club & Wellness",
@@ -75,7 +93,8 @@ const Properties = () => {
             "Family-oriented community"
           ],
           summary: "A wellness-focused family community offering villas and townhouses with health-centric designs and country club amenities.",
-          icon: "villa"
+          icon: "villa",
+          image: emaarHeights
         }
       ]
     },
@@ -91,7 +110,8 @@ const Properties = () => {
             "Contemporary Binghatti design language"
           ],
           summary: "A mid-rise residential tower featuring Binghatti's signature contemporary design with excellent connectivity to Downtown Dubai.",
-          icon: "apartment"
+          icon: "apartment",
+          image: binghattiTerraces
         },
         {
           name: "Binghatti Vintage",
@@ -102,7 +122,8 @@ const Properties = () => {
             "Smart layouts with balconies"
           ],
           summary: "Classic meets modern in this JVC development, located in one of Dubai's most sought-after rental communities.",
-          icon: "apartment"
+          icon: "apartment",
+          image: binghattiVintage
         },
         {
           name: "Binghatti Cullinan",
@@ -113,7 +134,8 @@ const Properties = () => {
             "High-end finishes & amenities"
           ],
           summary: "A signature architectural landmark in Business Bay offering luxury apartments with premium finishes and world-class amenities.",
-          icon: "apartment"
+          icon: "apartment",
+          image: binghattiCullinan
         }
       ]
     },
@@ -129,7 +151,8 @@ const Properties = () => {
             "Close to Dubai Academic City & Dubai International Airport"
           ],
           summary: "A luxury villa community in Dubailand with strategic connectivity to key Dubai destinations and a focus on premium living.",
-          icon: "villa"
+          icon: "villa",
+          image: sobhaElwood
         }
       ]
     },
@@ -146,7 +169,8 @@ const Properties = () => {
             "Open promenades, parks, and landscaped zones"
           ],
           summary: "Premium coastal residences on Dubai Islands featuring three towers with beach access, open promenades, and landscaped waterfront living.",
-          icon: "waterfront"
+          icon: "waterfront",
+          image: beyondHado
         }
       ]
     },
@@ -162,7 +186,8 @@ const Properties = () => {
             "Balconies + smart layouts"
           ],
           summary: "A boutique mid-rise development in JVT offering smart apartment layouts close to Dubai Marina and Internet City.",
-          icon: "apartment"
+          icon: "apartment",
+          image: imtiazSymphony
         },
         {
           name: "Le Blanc by Imtiaz",
@@ -173,7 +198,8 @@ const Properties = () => {
             "Premium finishes, large windows"
           ],
           summary: "European-inspired residences with elegant white and gold interiors, featuring premium finishes in high-demand JVC.",
-          icon: "apartment"
+          icon: "apartment",
+          image: imtiazLeblanc
         }
       ]
     }
@@ -240,26 +266,48 @@ const Properties = () => {
                     >
                       <Accordion type="single" collapsible>
                         <AccordionItem value={`item-${devIndex}-${projIndex}`} className="border-none">
-                          <AccordionTrigger className="px-5 py-4 sm:px-6 sm:py-5 hover:no-underline">
-                            <div className="flex items-start gap-3 sm:gap-4 text-left w-full pr-4">
-                              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                                {getIcon(project.icon)}
+                          <AccordionTrigger className="px-0 py-0 hover:no-underline [&>svg]:hidden">
+                            <div className="flex flex-col sm:flex-row w-full">
+                              {/* Project Image */}
+                              <div className="w-full sm:w-48 md:w-56 lg:w-64 flex-shrink-0">
+                                <div className="aspect-[16/10] sm:aspect-square overflow-hidden">
+                                  <img 
+                                    src={project.image} 
+                                    alt={project.name}
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                  />
+                                </div>
                               </div>
-                              <div className="flex-1 min-w-0">
-                                <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground mb-1">
-                                  {project.name}
-                                </h3>
-                                <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm">
-                                  <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-                                  <span className="line-clamp-1">{project.location}</span>
+                              
+                              {/* Project Info */}
+                              <div className="flex-1 p-4 sm:p-5 lg:p-6 text-left">
+                                <div className="flex items-start gap-3 sm:gap-4">
+                                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                    {getIcon(project.icon)}
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground mb-1">
+                                      {project.name}
+                                    </h3>
+                                    <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm">
+                                      <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+                                      <span className="line-clamp-2">{project.location}</span>
+                                    </div>
+                                    <p className="text-muted-foreground text-sm mt-2 line-clamp-2 hidden sm:block">
+                                      {project.summary}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="mt-3 text-xs text-primary font-medium">
+                                  Click to view details →
                                 </div>
                               </div>
                             </div>
                           </AccordionTrigger>
-                          <AccordionContent className="px-5 pb-5 sm:px-6 sm:pb-6">
-                            <div className="pl-0 sm:pl-16 space-y-4">
-                              {/* Summary */}
-                              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                          <AccordionContent className="px-4 pb-5 sm:px-6 sm:pb-6 border-t border-border/30">
+                            <div className="pt-4 space-y-4">
+                              {/* Summary (visible on mobile) */}
+                              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed sm:hidden">
                                 {project.summary}
                               </p>
 
