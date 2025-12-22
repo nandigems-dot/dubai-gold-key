@@ -248,7 +248,7 @@ const Properties = () => {
       name: "Binghatti",
       projects: [
         {
-          name: "Binghatti Terraces",
+          name: "Sky Terraces",
           location: "Motor City, Dubai – prime motorsport lifestyle community",
           typology: [
             "Studio, 1 & 2 Bedroom Apartments",
