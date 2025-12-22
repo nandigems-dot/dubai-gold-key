@@ -62,12 +62,12 @@ const ProjectCard = ({ project, developer }: { project: Project; developer: stri
         <CollapsibleTrigger className="w-full text-left">
           <div className="flex flex-col md:flex-row">
             {/* Project Image */}
-            <div className="w-full md:w-52 lg:w-64 flex-shrink-0">
-              <div className="aspect-video md:aspect-square h-48 md:h-full overflow-hidden">
+            <div className="w-full md:w-52 lg:w-64 flex-shrink-0 bg-secondary/50">
+              <div className="aspect-[4/3] md:aspect-[4/3] overflow-hidden flex items-center justify-center">
                 <img 
                   src={project.image} 
                   alt={project.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
