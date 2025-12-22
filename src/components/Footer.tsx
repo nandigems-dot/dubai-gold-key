@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start justify-center sm:justify-start gap-2 sm:gap-3 text-muted-foreground text-sm sm:text-base">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Business Village Tower B, Dubai, UAE</span>
+                <span>208, M2-Building 2020 Sheikh Zayed Rd - Al Quoz 3</span>
               </li>
             </ul>
           </div>
