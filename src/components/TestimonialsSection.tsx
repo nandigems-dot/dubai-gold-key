@@ -33,16 +33,16 @@ const TestimonialsSection = () => {
   ];
 
   const developers = [
-    { name: "Nakheel", logo: nakheelLogo, scale: "scale-100" },
-    { name: "Meraas", logo: meraasLogo, scale: "scale-100" },
-    { name: "Emaar", logo: emaarLogo, scale: "scale-100" },
-    { name: "Sobha", logo: sobhaLogo, scale: "scale-100" },
-    { name: "Damac", logo: damacLogo, scale: "scale-100" },
-    { name: "Imtiaz", logo: imtiazLogo, scale: "scale-100" },
-    { name: "Binghatti", logo: binghattiLogo, scale: "scale-90" },
-    { name: "Ellington", logo: ellingtonLogo, scale: "scale-100" },
-    { name: "Beyond", logo: beyondLogo, scale: "scale-100" },
-    { name: "Aldar", logo: aldarLogo, scale: "scale-75" },
+    { name: "Nakheel", logo: nakheelLogo, scale: "scale-100", bgClass: "bg-[#0d2e3f]" },
+    { name: "Meraas", logo: meraasLogo, scale: "scale-90", bgClass: "bg-white" },
+    { name: "Emaar", logo: emaarLogo, scale: "scale-100", bgClass: "bg-white" },
+    { name: "Sobha", logo: sobhaLogo, scale: "scale-100", bgClass: "bg-white" },
+    { name: "Damac", logo: damacLogo, scale: "scale-100", bgClass: "bg-white" },
+    { name: "Imtiaz", logo: imtiazLogo, scale: "scale-100", bgClass: "bg-white" },
+    { name: "Binghatti", logo: binghattiLogo, scale: "scale-90", bgClass: "bg-white" },
+    { name: "Ellington", logo: ellingtonLogo, scale: "scale-90", bgClass: "bg-white" },
+    { name: "Beyond", logo: beyondLogo, scale: "scale-90", bgClass: "bg-white" },
+    { name: "Aldar", logo: aldarLogo, scale: "scale-75", bgClass: "bg-white" },
   ];
 
   return (
@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
                 key={index}
                 className="flex flex-col items-center gap-3"
               >
-                <div className="flex items-center justify-center p-4 sm:p-5 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-[160px] h-24 sm:h-28 border border-border/20 overflow-hidden">
+                <div className={`flex items-center justify-center p-3 sm:p-4 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-[160px] h-24 sm:h-28 border border-border/20 overflow-hidden ${developer.bgClass || 'bg-white'}`}>
                   <img 
                     src={developer.logo} 
                     alt={`${developer.name} logo`}
