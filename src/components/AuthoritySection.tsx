@@ -19,7 +19,7 @@ const AuthoritySection = () => {
               <div className="absolute -inset-3 sm:-inset-4 border border-primary/30 rounded-2xl -rotate-3" />
               <div className="absolute -inset-3 sm:-inset-4 border border-primary/20 rounded-2xl rotate-2" />
               
-              {/* Image */}
+              {/* Image - Responsive with srcset for proper sizing */}
               <div className="relative rounded-xl overflow-hidden gold-glow">
                 <img 
                   src={zubairImage} 
@@ -27,7 +27,10 @@ const AuthoritySection = () => {
                   loading="lazy"
                   width={400}
                   height={500}
+                  decoding="async"
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 384px, 400px"
                   className="w-full h-auto object-cover aspect-[4/5]"
+                  style={{ maxWidth: '400px', margin: '0 auto' }}
                 />
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />

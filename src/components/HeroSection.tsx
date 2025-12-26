@@ -7,27 +7,27 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[100svh] flex items-center justify-center overflow-hidden">
-      {/* Hero Image - Responsive srcset for optimal loading */}
+      {/* Hero Image - Responsive srcset with higher compression for mobile */}
       <picture>
-        {/* Mobile: smaller image for faster LCP */}
+        {/* Mobile: smaller image with higher compression */}
         <source
           media="(max-width: 640px)"
-          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=640&q=75&fm=webp&auto=format"
+          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=640&q=60&fm=webp&auto=format"
           type="image/webp"
         />
         {/* Tablet */}
         <source
           media="(max-width: 1024px)"
-          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1024&q=80&fm=webp&auto=format"
+          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1024&q=70&fm=webp&auto=format"
           type="image/webp"
         />
         {/* Desktop */}
         <source
-          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format"
+          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=75&fm=webp&auto=format"
           type="image/webp"
         />
         <img 
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format"
+          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=75&fm=webp&auto=format"
           alt="Dubai Skyline - Luxury Real Estate"
           width={1400}
           height={933}

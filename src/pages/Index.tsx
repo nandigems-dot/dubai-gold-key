@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import AuthoritySection from "@/components/AuthoritySection";
 import LeadFormSection from "@/components/LeadFormSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Lazy load below-the-fold components for better initial load performance
+const AuthoritySection = lazy(() => import("@/components/AuthoritySection"));
 const WhyDubaiSection = lazy(() => import("@/components/WhyDubaiSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const WhyZubairSection = lazy(() => import("@/components/WhyZubairSection"));
@@ -23,7 +23,9 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <AuthoritySection />
+      <Suspense fallback={<SectionPlaceholder />}>
+        <AuthoritySection />
+      </Suspense>
       <LeadFormSection />
       <Suspense fallback={<SectionPlaceholder />}>
         <WhyDubaiSection />
