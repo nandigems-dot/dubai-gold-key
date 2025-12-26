@@ -95,12 +95,15 @@ const LeadFormSection = () => {
   return (
     <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 bg-card/30">
       <div className="max-w-md sm:max-w-lg mx-auto text-center">
-        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
-          Get <span className="gold-gradient-text">Exclusive</span> Property Deals
-        </h2>
-        <p className="text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8 px-2">
-          Fill the form below for a free advisory session with our investment experts
-        </p>
+        {/* Fixed height container to prevent CLS */}
+        <div className="min-h-[80px] sm:min-h-[96px]">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
+            Get <span className="gold-gradient-text">Exclusive</span> Property Deals
+          </h2>
+          <p className="text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8 px-2">
+            Fill the form below for a free advisory session with our investment experts
+          </p>
+        </div>
 
         <div className="glass-card rounded-xl p-5 sm:p-6 md:p-8 border border-border/50">
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 text-left">

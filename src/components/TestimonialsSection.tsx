@@ -92,10 +92,11 @@ const TestimonialsSection = () => {
                   <img 
                     src={developer.logo} 
                     alt={`${developer.name} logo`}
-                    width={120}
-                    height={80}
+                    width={80}
+                    height={60}
                     loading="lazy"
-                    className={`max-h-full max-w-full object-contain ${developer.scale}`}
+                    decoding="async"
+                    className={`max-h-[60px] max-w-[100px] object-contain ${developer.scale}`}
                   />
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-foreground/80 text-center">
