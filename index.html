@@ -47,8 +47,14 @@
     <!-- Favicon -->
     <link rel="icon" href="/favicon.png" type="image/png">
 
-    <!-- Preload Hero Image (Critical for LCP) - Optimized WebP from CDN -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format" fetchpriority="high">
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+    <!-- Preload Hero Image (Critical for LCP) - Mobile-first optimized -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=640&q=75&fm=webp&auto=format" fetchpriority="high" media="(max-width: 640px)">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1024&q=80&fm=webp&auto=format" fetchpriority="high" media="(min-width: 641px) and (max-width: 1024px)">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format" fetchpriority="high" media="(min-width: 1025px)">
 
     <!-- Google Fonts - Non-render-blocking with preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,10 +65,12 @@
 
     <!-- Critical CSS for above-the-fold content -->
     <style>
-      :root { --background: 222 47% 8%; --foreground: 60 9% 98%; --primary: 0 72% 51%; }
-      body { background-color: hsl(222, 47%, 8%); color: hsl(60, 9%, 98%); font-family: system-ui, -apple-system, sans-serif; margin: 0; }
-      h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
-      .hero-placeholder { min-height: 60vh; background-color: hsl(222, 47%, 8%); }
+      :root { --background: 222 30% 6%; --foreground: 0 0% 95%; --primary: 0 72% 51%; }
+      body { background-color: hsl(222, 30%, 6%); color: hsl(0, 0%, 95%); font-family: 'Inter', system-ui, -apple-system, sans-serif; margin: 0; }
+      h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+      .hero-placeholder { min-height: 60vh; background-color: hsl(222, 30%, 6%); }
+      /* Prevent FOUT */
+      .font-loading body { visibility: hidden; }
     </style>
   </head>
 

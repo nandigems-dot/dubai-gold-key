@@ -7,17 +7,36 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[100svh] flex items-center justify-center overflow-hidden">
-      {/* Hero Image - Optimized WebP from Unsplash CDN */}
-      <img 
-        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format"
-        alt="Dubai Skyline - Luxury Real Estate"
-        width={1400}
-        height={933}
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+      {/* Hero Image - Responsive srcset for optimal loading */}
+      <picture>
+        {/* Mobile: smaller image for faster LCP */}
+        <source
+          media="(max-width: 640px)"
+          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=640&q=75&fm=webp&auto=format"
+          type="image/webp"
+        />
+        {/* Tablet */}
+        <source
+          media="(max-width: 1024px)"
+          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1024&q=80&fm=webp&auto=format"
+          type="image/webp"
+        />
+        {/* Desktop */}
+        <source
+          srcSet="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format"
+          type="image/webp"
+        />
+        <img 
+          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format"
+          alt="Dubai Skyline - Luxury Real Estate"
+          width={1400}
+          height={933}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </picture>
       
       {/* Overlay Gradient - Solid, no blur for performance */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
