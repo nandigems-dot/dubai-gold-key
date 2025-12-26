@@ -7,12 +7,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[100svh] flex items-center justify-center overflow-hidden">
-      {/* Hero Image - Preloaded in index.html, uses public path */}
+      {/* Hero Image - Optimized WebP from Unsplash CDN */}
       <img 
-        src="/hero.jpg"
+        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1400&q=80&fm=webp&auto=format"
         alt="Dubai Skyline - Luxury Real Estate"
-        width={1920}
-        height={1080}
+        width={1400}
+        height={933}
         loading="eager"
         fetchPriority="high"
         decoding="async"
