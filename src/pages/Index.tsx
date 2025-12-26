@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import LeadFormSection from "@/components/LeadFormSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-// Lazy load below-the-fold components for better initial load performance
+// Lazy load all below-the-fold components
 const AuthoritySection = lazy(() => import("@/components/AuthoritySection"));
 const WhyDubaiSection = lazy(() => import("@/components/WhyDubaiSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
@@ -13,9 +13,9 @@ const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"
 const CTASection = lazy(() => import("@/components/CTASection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
-// Minimal loading placeholder
-const SectionPlaceholder = () => (
-  <div className="min-h-[200px] bg-background" />
+// Minimal loading placeholder with fixed height to prevent CLS
+const SectionPlaceholder = ({ height = 200 }: { height?: number }) => (
+  <div className="bg-background" style={{ minHeight: `${height}px` }} />
 );
 
 const Index = () => {
@@ -23,16 +23,26 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <Suspense fallback={<SectionPlaceholder />}>
+      <Suspense fallback={<SectionPlaceholder height={400} />}>
         <AuthoritySection />
       </Suspense>
       <LeadFormSection />
-      <Suspense fallback={<SectionPlaceholder />}>
+      <Suspense fallback={<SectionPlaceholder height={300} />}>
         <WhyDubaiSection />
+      </Suspense>
+      <Suspense fallback={<SectionPlaceholder height={300} />}>
         <ServicesSection />
+      </Suspense>
+      <Suspense fallback={<SectionPlaceholder height={300} />}>
         <WhyZubairSection />
+      </Suspense>
+      <Suspense fallback={<SectionPlaceholder height={500} />}>
         <TestimonialsSection />
+      </Suspense>
+      <Suspense fallback={<SectionPlaceholder height={200} />}>
         <CTASection />
+      </Suspense>
+      <Suspense fallback={<SectionPlaceholder height={150} />}>
         <Footer />
       </Suspense>
       <WhatsAppButton />

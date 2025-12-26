@@ -1,7 +1,8 @@
 import { Quote, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLazySection } from "@/hooks/use-lazy-section";
 
-// Developer Logos
+// Developer Logos - lazy loaded
 import nakheelLogo from "@/assets/developers/nakheel.jpg";
 import meraasLogo from "@/assets/developers/meraas.png";
 import emaarLogo from "@/assets/developers/emaar.jpg";
@@ -14,6 +15,8 @@ import beyondLogo from "@/assets/developers/beyond.png";
 import aldarLogo from "@/assets/developers/aldar.png";
 
 const TestimonialsSection = () => {
+  const { ref: logosRef, isVisible: logosVisible } = useLazySection(0.1, "100px");
+
   const testimonials = [
     {
       quote: "Zubair made my first Dubai investment seamless. His knowledge of the market and transparent approach gave me complete confidence.",
@@ -46,7 +49,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="section-padding">
+    <section className="section-padding" style={{ contain: "layout style" }}>
       <div className="container-luxury">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
@@ -77,26 +80,27 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Developer Logos */}
-        <div className="border-t border-b border-border/50 py-10 sm:py-12 lg:py-16">
+        {/* Developer Logos - Lazy loaded */}
+        <div ref={logosRef} className="border-t border-b border-border/50 py-10 sm:py-12 lg:py-16">
           <p className="text-center text-xs sm:text-sm text-muted-foreground mb-8 sm:mb-10 uppercase tracking-widest px-4">
             Partnering with Dubai's Premier Developers
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 items-start justify-items-center">
-            {developers.map((developer, index) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 items-start justify-items-center min-h-[200px]">
+            {logosVisible && developers.map((developer, index) => (
               <div 
                 key={index}
-                className="flex flex-col items-center gap-3"
+                className="flex flex-col items-center gap-3 animate-fade-in"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className={`flex items-center justify-center p-3 sm:p-4 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-[160px] h-24 sm:h-28 border border-border/20 overflow-hidden ${developer.bgClass || 'bg-white'}`}>
+                <div className={`flex items-center justify-center p-3 sm:p-4 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-[140px] h-20 sm:h-24 border border-border/20 overflow-hidden ${developer.bgClass || 'bg-white'}`}>
                   <img 
                     src={developer.logo} 
                     alt={`${developer.name} logo`}
-                    width={80}
-                    height={60}
+                    width={60}
+                    height={40}
                     loading="lazy"
                     decoding="async"
-                    className={`max-h-[60px] max-w-[100px] object-contain ${developer.scale}`}
+                    className={`max-h-[40px] max-w-[80px] object-contain ${developer.scale}`}
                   />
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-foreground/80 text-center">

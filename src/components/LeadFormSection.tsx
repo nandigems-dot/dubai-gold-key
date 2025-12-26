@@ -93,10 +93,14 @@ const LeadFormSection = () => {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 bg-card/30">
+    <section 
+      id="contact" 
+      className="py-12 sm:py-20 px-4 sm:px-6 bg-card/30"
+      style={{ contain: "layout style", minHeight: "500px" }}
+    >
       <div className="max-w-md sm:max-w-lg mx-auto text-center">
-        {/* Fixed height container to prevent CLS */}
-        <div className="min-h-[80px] sm:min-h-[96px]">
+        {/* Header with reserved height to prevent CLS */}
+        <div style={{ minHeight: "90px" }}>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
             Get <span className="gold-gradient-text">Exclusive</span> Property Deals
           </h2>

@@ -1,7 +1,10 @@
 import { Building2, TrendingUp, Globe } from "lucide-react";
+import { useLazySection } from "@/hooks/use-lazy-section";
 import zubairImage from "@/assets/zubair-malik.jpg";
 
 const AuthoritySection = () => {
+  const { ref, isVisible } = useLazySection(0.1, "50px");
+
   const badges = [
     { icon: Building2, text: "Dubai Real Estate" },
     { icon: TrendingUp, text: "Luxury & Investment Expert" },
@@ -9,29 +12,30 @@ const AuthoritySection = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-secondary/30">
+    <section id="about" className="section-padding bg-secondary/30" style={{ contain: "layout style" }}>
       <div className="container-luxury">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-20 items-center">
           {/* Image */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative order-2 lg:order-1" ref={ref}>
             <div className="relative mx-auto max-w-xs sm:max-w-md lg:max-w-none">
               {/* Gold border frame */}
               <div className="absolute -inset-3 sm:-inset-4 border border-primary/30 rounded-2xl -rotate-3" />
               <div className="absolute -inset-3 sm:-inset-4 border border-primary/20 rounded-2xl rotate-2" />
               
-              {/* Image - Responsive with srcset for proper sizing */}
-              <div className="relative rounded-xl overflow-hidden gold-glow">
-                <img 
-                  src={zubairImage} 
-                  alt="Zubair Malik - Dubai Real Estate Investment Advisor"
-                  loading="lazy"
-                  width={400}
-                  height={500}
-                  decoding="async"
-                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 384px, 400px"
-                  className="w-full h-auto object-cover aspect-[4/5]"
-                  style={{ maxWidth: '400px', margin: '0 auto' }}
-                />
+              {/* Image - Only load when visible */}
+              <div className="relative rounded-xl overflow-hidden gold-glow" style={{ minHeight: "300px" }}>
+                {isVisible && (
+                  <img 
+                    src={zubairImage} 
+                    alt="Zubair Malik - Dubai Real Estate Investment Advisor"
+                    loading="lazy"
+                    width={320}
+                    height={400}
+                    decoding="async"
+                    className="w-full h-auto object-cover aspect-[4/5] animate-fade-in"
+                    style={{ maxWidth: '320px', margin: '0 auto' }}
+                  />
+                )}
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
