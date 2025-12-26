@@ -48,12 +48,19 @@
     <link rel="icon" href="/favicon.png" type="image/png">
 
     <!-- Preload Hero Image (Critical for LCP) -->
-    <link rel="preload" as="image" href="/src/assets/dubai-skyline-hero.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Optimized loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      :root { --background: 222 47% 8%; --foreground: 60 9% 98%; }
+      body { background-color: hsl(222, 47%, 8%); color: hsl(60, 9%, 98%); font-family: 'Inter', system-ui, sans-serif; margin: 0; }
+      .hero-placeholder { min-height: 60vh; background-color: hsl(222, 47%, 8%); }
+    </style>
   </head>
 
   <body>

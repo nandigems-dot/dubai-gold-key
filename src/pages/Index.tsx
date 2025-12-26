@@ -1,14 +1,22 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AuthoritySection from "@/components/AuthoritySection";
 import LeadFormSection from "@/components/LeadFormSection";
-import WhyDubaiSection from "@/components/WhyDubaiSection";
-import ServicesSection from "@/components/ServicesSection";
-import WhyZubairSection from "@/components/WhyZubairSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+
+// Lazy load below-the-fold components for better initial load performance
+const WhyDubaiSection = lazy(() => import("@/components/WhyDubaiSection"));
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const WhyZubairSection = lazy(() => import("@/components/WhyZubairSection"));
+const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
+const CTASection = lazy(() => import("@/components/CTASection"));
+const Footer = lazy(() => import("@/components/Footer"));
+
+// Minimal loading placeholder
+const SectionPlaceholder = () => (
+  <div className="min-h-[200px] bg-background" />
+);
 
 const Index = () => {
   return (
@@ -17,12 +25,14 @@ const Index = () => {
       <HeroSection />
       <AuthoritySection />
       <LeadFormSection />
-      <WhyDubaiSection />
-      <ServicesSection />
-      <WhyZubairSection />
-      <TestimonialsSection />
-      <CTASection />
-      <Footer />
+      <Suspense fallback={<SectionPlaceholder />}>
+        <WhyDubaiSection />
+        <ServicesSection />
+        <WhyZubairSection />
+        <TestimonialsSection />
+        <CTASection />
+        <Footer />
+      </Suspense>
       <WhatsAppButton />
     </main>
   );

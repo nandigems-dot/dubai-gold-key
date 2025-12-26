@@ -24,6 +24,9 @@ const AuthoritySection = () => {
                 <img 
                   src={zubairImage} 
                   alt="Zubair Malik - Dubai Real Estate Investment Advisor"
+                  loading="lazy"
+                  width={400}
+                  height={500}
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
                 {/* Overlay gradient */}
