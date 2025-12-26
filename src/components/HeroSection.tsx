@@ -7,17 +7,20 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[100svh] flex items-center justify-center overflow-hidden">
-      {/* Hero Image - Preloaded in index.html, uses public path */}
-      <img 
-        src="/hero.jpg"
-        alt="Dubai Skyline - Luxury Real Estate"
-        width={1920}
-        height={1080}
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+      {/* Hero Image - Preloaded in index.html, uses WebP with JPG fallback */}
+      <picture>
+        <source srcSet="/hero.webp" type="image/webp" />
+        <img 
+          src="/hero.jpg"
+          alt="Dubai Skyline - Luxury Real Estate"
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </picture>
       
       {/* Overlay Gradient - Solid, no blur for performance */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
