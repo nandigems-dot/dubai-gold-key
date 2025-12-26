@@ -1,10 +1,16 @@
-import { MessageCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+// Inline SVG icons to avoid loading lucide-react chunk for hero
+const MessageCircleIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:animate-pulse"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+);
+const MailIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+);
 
 const HeroSection = () => {
   const whatsappLink = "https://wa.me/971529504782?text=Hi%20Zubair,%20I'm%20interested%20in%20Dubai%20real%20estate%20investment.";
   const instagramLink = "https://www.instagram.com/zubair_realtor_dxb/";
-
   return (
     <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[100svh] flex items-center justify-center overflow-hidden">
       {/* Hero Image - Responsive srcset with higher compression for mobile */}
@@ -74,7 +80,7 @@ const HeroSection = () => {
               className="w-full sm:w-auto text-sm sm:text-base group"
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 group-hover:animate-pulse" />
+                <MessageCircleIcon />
                 Get Exclusive Deals on WhatsApp
               </a>
             </Button>
@@ -86,7 +92,7 @@ const HeroSection = () => {
               className="w-full sm:w-auto text-sm sm:text-base group"
             >
               <a href={instagramLink} target="_blank" rel="noopener noreferrer">
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <MailIcon />
                 DM for Investment Consultation
               </a>
             </Button>
