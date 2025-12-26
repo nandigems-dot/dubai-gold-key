@@ -1,6 +1,5 @@
 import { MessageCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/dubai-skyline-hero.jpg";
 
 const HeroSection = () => {
   const whatsappLink = "https://wa.me/971529504782?text=Hi%20Zubair,%20I'm%20interested%20in%20Dubai%20real%20estate%20investment.";
@@ -8,10 +7,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[60vh] sm:min-h-[70vh] lg:min-h-[100svh] flex items-center justify-center overflow-hidden">
-      {/* Hero Image - Eager loaded for LCP */}
+      {/* Hero Image - Preloaded in index.html, uses public path */}
       <img 
-        src={heroImage}
-        alt="Dubai Skyline"
+        src="/hero.jpg"
+        alt="Dubai Skyline - Luxury Real Estate"
+        width={1920}
+        height={1080}
         loading="eager"
         fetchPriority="high"
         decoding="async"
