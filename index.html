@@ -47,21 +47,18 @@
     <!-- Favicon -->
     <link rel="icon" href="/favicon.png" type="image/png">
 
-    <!-- Preload Hero Image (Critical for LCP) - WebP for modern browsers -->
-    <link rel="preload" as="image" href="/hero.webp" type="image/webp" fetchpriority="high">
+    <!-- Preload Hero Image (Critical for LCP) -->
+    <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
 
-    <!-- Google Fonts - Non-render-blocking with preload -->
+    <!-- Google Fonts - Optimized loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Critical CSS for above-the-fold content -->
     <style>
-      :root { --background: 222 47% 8%; --foreground: 60 9% 98%; --primary: 0 72% 51%; }
-      body { background-color: hsl(222, 47%, 8%); color: hsl(60, 9%, 98%); font-family: system-ui, -apple-system, sans-serif; margin: 0; }
-      h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
+      :root { --background: 222 47% 8%; --foreground: 60 9% 98%; }
+      body { background-color: hsl(222, 47%, 8%); color: hsl(60, 9%, 98%); font-family: 'Inter', system-ui, sans-serif; margin: 0; }
       .hero-placeholder { min-height: 60vh; background-color: hsl(222, 47%, 8%); }
     </style>
   </head>

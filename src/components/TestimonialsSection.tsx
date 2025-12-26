@@ -92,9 +92,6 @@ const TestimonialsSection = () => {
                   <img 
                     src={developer.logo} 
                     alt={`${developer.name} logo`}
-                    width={120}
-                    height={80}
-                    loading="lazy"
                     className={`max-h-full max-w-full object-contain ${developer.scale}`}
                   />
                 </div>

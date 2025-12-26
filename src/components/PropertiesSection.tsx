@@ -67,9 +67,6 @@ const PropertiesSection = () => {
                 <img 
                   src={property.image} 
                   alt={property.title}
-                  width={600}
-                  height={450}
-                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
