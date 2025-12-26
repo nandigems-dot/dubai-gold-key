@@ -1,39 +1,31 @@
-import { lazy, Suspense, memo } from "react";
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import AuthoritySection from "@/components/AuthoritySection";
+import LeadFormSection from "@/components/LeadFormSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
-// Lazy load ALL below-fold components for better initial load
-const AuthoritySection = lazy(() => import("@/components/AuthoritySection"));
-const LeadFormSection = lazy(() => import("@/components/LeadFormSection"));
+// Lazy load below-the-fold components for better initial load performance
 const WhyDubaiSection = lazy(() => import("@/components/WhyDubaiSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const WhyZubairSection = lazy(() => import("@/components/WhyZubairSection"));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
 const CTASection = lazy(() => import("@/components/CTASection"));
 const Footer = lazy(() => import("@/components/Footer"));
-const WhatsAppButton = lazy(() => import("@/components/WhatsAppButton"));
 
-// Minimal skeleton for lazy sections
-const SectionSkeleton = memo(() => (
-  <div className="min-h-[200px] bg-background" aria-hidden="true" />
-));
-SectionSkeleton.displayName = "SectionSkeleton";
+// Minimal loading placeholder
+const SectionPlaceholder = () => (
+  <div className="min-h-[200px] bg-background" />
+);
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
-      {/* Critical path - load immediately */}
       <Navbar />
       <HeroSection />
-      
-      {/* Below-fold content - lazy loaded */}
-      <Suspense fallback={<SectionSkeleton />}>
-        <AuthoritySection />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <LeadFormSection />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
+      <AuthoritySection />
+      <LeadFormSection />
+      <Suspense fallback={<SectionPlaceholder />}>
         <WhyDubaiSection />
         <ServicesSection />
         <WhyZubairSection />
@@ -41,9 +33,7 @@ const Index = () => {
         <CTASection />
         <Footer />
       </Suspense>
-      <Suspense fallback={null}>
-        <WhatsAppButton />
-      </Suspense>
+      <WhatsAppButton />
     </main>
   );
 };
