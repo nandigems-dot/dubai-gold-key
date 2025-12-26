@@ -50,15 +50,18 @@
     <!-- Preload Hero Image (Critical for LCP) -->
     <link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
 
-    <!-- Google Fonts - Optimized loading -->
+    <!-- Google Fonts - Non-render-blocking with preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- Critical CSS for above-the-fold content -->
     <style>
-      :root { --background: 222 47% 8%; --foreground: 60 9% 98%; }
-      body { background-color: hsl(222, 47%, 8%); color: hsl(60, 9%, 98%); font-family: 'Inter', system-ui, sans-serif; margin: 0; }
+      :root { --background: 222 47% 8%; --foreground: 60 9% 98%; --primary: 0 72% 51%; }
+      body { background-color: hsl(222, 47%, 8%); color: hsl(60, 9%, 98%); font-family: system-ui, -apple-system, sans-serif; margin: 0; }
+      h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
       .hero-placeholder { min-height: 60vh; background-color: hsl(222, 47%, 8%); }
     </style>
   </head>
