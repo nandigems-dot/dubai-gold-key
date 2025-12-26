@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { MessageCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
   const whatsappLink = "https://wa.me/971529504782?text=Hi%20Zubair,%20I'm%20interested%20in%20Dubai%20real%20estate%20investment.";
   const instagramLink = "https://www.instagram.com/zubair_realtor_dxb/";
 
@@ -15,7 +16,7 @@ const HeroSection = () => {
         height={1080}
         loading="eager"
         fetchPriority="high"
-        decoding="async"
+        decoding="sync"
         className="absolute inset-0 w-full h-full object-cover"
       />
       
@@ -83,6 +84,8 @@ const HeroSection = () => {
       </div>
     </section>
   );
-};
+});
+
+HeroSection.displayName = "HeroSection";
 
 export default HeroSection;
